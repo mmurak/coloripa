@@ -68,6 +68,8 @@ function clearTextArea() {
 
 function clearOutputArea() {
     outputArea.innerHTML = "";
+    G.listArea1.innerHTML = "";
+    G.listArea2.innerHTML = "";
 }
 
 function clearListArea() {
