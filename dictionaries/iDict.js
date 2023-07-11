@@ -1,3 +1,4 @@
+// Copyright (C) 1993-2015 Carnegie Mellon University. All rights reserved.
 const iDict = {
 "baʊt": ["bout","'bout"],
 "kəz": ["'cause"],
