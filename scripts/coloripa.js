@@ -89,9 +89,15 @@ function appendTextInColor(text, color) {
 
 //English to IPAish converter
 
+function regularizePunct(input) {
+    let regged = input.replaceAll("’", "'");
+    return regged;
+}
+
 function convertButton() {
     G.feelingLucky = false;
-    let pron = convert(G.textArea.value);
+    let regged = regularizePunct(G.textArea.value);
+    let pron = convert(regged);
     G.pronArea.value = pron;
     clearOutputArea();
     G.listArea1.innerHTML = "";
@@ -100,7 +106,8 @@ function convertButton() {
 }
 function convertLuckyButton() {
     G.feelingLucky = true;
-    let pron = convert(G.textArea.value);
+    let regged = regularizePunct(G.textArea.value);
+    let pron = convert(regged);
     G.pronArea.value = pron;
     clearOutputArea();
     G.listArea1.innerHTML = "";

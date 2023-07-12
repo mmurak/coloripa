@@ -26,7 +26,7 @@ class GlobalManager {
             'other': ['orange', new RegExp("[ʘǀǃǂǁɓɗʄɠʛʼʍwɥʜʢʡɕʑɺɧ]"), 1],
             'affricative': ['red', new RegExp("[ʣʤʥʦʧʨʩʪʫ]"), 1],
         };
-        this.tokenExp = new RegExp("([^'A-Z\-]*)(['A-Z\-]+)(.*)", "msi");
+        this.tokenExp = new RegExp("([^'A-Z]*)(['A-Z]+)(.*)", "msi");
         this.numberExp = new RegExp(/^[0-9]+$/);
 
         this.digraphManager = new DigraphManager();
