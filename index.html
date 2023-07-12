@@ -7,19 +7,11 @@
         <link rel="stylesheet" href="index.css" />
     </head>
     <body>
-        <div class="modal" id="textDialog">
-            <div class="modal-content">
-                <h3>英文を入力（powered by cmudict）</h3>
-                <textarea id="textArea"></textarea>
-                <br/>
-                <input type="button" id="cancelButton" value="Cancel" onclick="cancelButton();"></input>&nbsp;
-                <input type="button" id="okButton" value="変換" onclick="okButton();"></input>
-                <input type="button" id="okLuckyButton" value="おまかせ変換" onclick="okLuckyButton();"></input>
-            </div>
-        </div>
-
         <div id="mainPanel">
-            <input type="button" class="control-button" value="Process text" onclick="openTextDialog();"></input>
+            <span style="float:left">英文入力欄</span><span style="float:right">Powered by CMUdict.</span>
+            <textarea id="textArea"></textarea>
+            <input type="button" class="control-button" id="convertButton" value="変換" onclick="convertButton();"></input>
+            <input type="button" class="control-button" id="convertLuckyButton" value="おまかせ変換" onclick="convertLuckyButton();"></input>
             <textarea class="text-field" id="pronArea" spellcheck="false"></textarea>
             <br/>
             <input type="button" class="control-button" id="processButton" value="Colorize" onclick="doColourings();"></input>

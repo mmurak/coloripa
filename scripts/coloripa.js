@@ -2,7 +2,7 @@ let G = new GlobalManager();
 let cmuDictionary = new Dictionary(iDict);
 let miniDictionary = new Dictionary(miniDict);
 
-pronArea.focus();
+textArea.focus();
 
 
 
@@ -55,12 +55,11 @@ function doColourings() {
     for(let i of a.sort()) {
         G.listArea2.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;/" + i + "/<br/>";
     }
-
-
     pronArea.focus();
 }
 
 function clearTextArea() {
+    textArea.value = "";
     pronArea.value = "";
     clearOutputArea();
     pronArea.focus();
@@ -87,33 +86,23 @@ function appendTextInColor(text, color) {
 
 //English to IPAish converter
 
-function openTextDialog() {
-    G.textArea.value = "";
-    G.textDialog.style.display = "block";
-    G.textArea.focus();
-}
-function okButton() {
-    G.textDialog.style.display = "none";
+function convertButton() {
     G.feelingLucky = false;
     let pron = convert(G.textArea.value);
-    console.log("Pron:" + pron);
     G.pronArea.value = pron;
     clearOutputArea();
     G.listArea1.innerHTML = "";
     G.listArea2.innerHTML = "";
+    G.pronArea.focus();
 }
-function okLuckyButton() {
-    G.textDialog.style.display = "none";
+function convertLuckyButton() {
     G.feelingLucky = true;
     let pron = convert(G.textArea.value);
-    console.log("Pron:" + pron);
     G.pronArea.value = pron;
     clearOutputArea();
     G.listArea1.innerHTML = "";
     G.listArea2.innerHTML = "";
-}
-function cancelButton() {
-    G.textDialog.style.display = "none";
+    G.pronArea.focus();
 }
 
 function convert(input) {

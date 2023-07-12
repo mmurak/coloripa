@@ -11,4 +11,5 @@ const miniDict = {
 "əz" : ["as"],
 "ðæt" : ["that"],
 "ɑr" : ["are"],
+"əv" : ["of"],
 };
