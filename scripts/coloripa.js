@@ -2,7 +2,7 @@ let G = new GlobalManager();
 let cmuDictionary = new Dictionary(iDict);
 let miniDictionary = new Dictionary(miniDict);
 
-textArea.focus();
+G.textArea.focus();
 
 
 
