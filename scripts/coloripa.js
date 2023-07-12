@@ -58,9 +58,12 @@ function doColourings() {
     pronArea.focus();
 }
 
-function clearTextArea() {
-    textArea.value = "";
-    pronArea.value = "";
+function clearTopArea() {
+    G.textArea.value = "";
+    pronArea.focus();
+}
+
+function clearBottomArea() {
     clearOutputArea();
     pronArea.focus();
 }

@@ -8,14 +8,15 @@
     </head>
     <body>
         <div id="mainPanel">
-            <span style="float:left">英文入力欄</span><span style="float:right">Powered by CMUdict.</span>
+            <input type="button" class="control-button" id="convertButton" value="英文欄消去" onclick="clearTopArea();"></input>
+            <span style="float:right">Powered by CMUdict.</span>
             <textarea id="textArea"></textarea>
             <input type="button" class="control-button" id="convertButton" value="変換" onclick="convertButton();"></input>
             <input type="button" class="control-button" id="convertLuckyButton" value="おまかせ変換" onclick="convertLuckyButton();"></input>
             <textarea class="text-field" id="pronArea" spellcheck="false"></textarea>
             <br/>
             <input type="button" class="control-button" id="processButton" value="Colorize" onclick="doColourings();"></input>
-            <input type="button" class="control-button" id="clearButton" value="Clear" onclick="clearTextArea();"></input>
+            <input type="button" class="control-button" id="clearButton" value="Clear" onclick="clearBottomArea();"></input>
             <div>
                 <div style="float:left">
                     <p class="text-field" id="outputArea" spellcheck="false"></p>
